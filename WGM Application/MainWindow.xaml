@@ -14,13 +14,37 @@
     </Window.SystemBackdrop>
 
     <Grid Background="#FF001C3D">
-        <MenuBar VerticalAlignment="Top">
-            <MenuBarItem Title="File" Background="#003366">
+        <!--This is for the menu bar-->
+        <MenuBar VerticalAlignment="Top" Background="#003366">
+            <MenuBarItem Title="File" >
                 <MenuFlyoutItem Text="New Template" Click="openActions"/>
                 <MenuFlyoutItem Text="Open Template" Click="openTemplate"/>
                 <MenuFlyoutItem Text="New Map" Click="openActions"/>
                 <MenuFlyoutItem Text="New Style"/>
             </MenuBarItem>
+            <MenuBarItem Title="Edit">
+                <MenuFlyoutSubItem Text="Location">
+                    <MenuFlyoutItem Text="Poll Location" Click="pollLocation"/>
+                    <MenuFlyoutItem Text="Input Location" Click="OpenLocationDialog"/>
+                </MenuFlyoutSubItem>
+            </MenuBarItem>
+
         </MenuBar>
+        
+        <!--This is to show the location-->
+        <TextBlock Padding="0,10,20,0" x:Name="LocationDisplay" Text="Location" HorizontalAlignment="Right" VerticalAlignment="Top"></TextBlock>
+        
+        <!--This is for the input location pop up-->
+        <ContentDialog x:Name="LocationDialog"
+               Title="Enter Your Location"
+               PrimaryButtonText="OK"
+               SecondaryButtonText="Cancel">
+            <StackPanel>
+                <AutoSuggestBox x:Name="LocationInput"
+                PlaceholderText="Enter location..."
+                TextChanged="OnLocationTextChanged"
+                SuggestionChosen="OnLocationChosen"/>
+            </StackPanel>
+        </ContentDialog>
     </Grid>
 </Window>

@@ -14,16 +14,38 @@
     </Window.SystemBackdrop>
 
     <Grid Background="#FF001C3D">
-        <Rectangle VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="25" Fill="#003366"></Rectangle>
-        <MenuBar>
-            <MenuBarItem Title="File">
-                <MenuFlyoutItem x:ConnectionId='2' Text="New Template"                    />
-                <MenuFlyoutItem x:ConnectionId='3' Text="Open Template"                     />
-                <MenuFlyoutItem x:ConnectionId='4' Text="New Map"                    />
+        <!--This is for the menu bar-->
+        <MenuBar VerticalAlignment="Top" Background="#003366">
+            <MenuBarItem Title="File" >
+                <MenuFlyoutItem x:ConnectionId='7' Text="New Template"                    />
+                <MenuFlyoutItem x:ConnectionId='8' Text="Open Template"                     />
+                <MenuFlyoutItem x:ConnectionId='9' Text="New Map"                    />
                 <MenuFlyoutItem Text="New Style"/>
             </MenuBarItem>
-        </MenuBar>
+            <MenuBarItem Title="Edit">
+                <MenuFlyoutSubItem Text="Location">
+                    <MenuFlyoutItem x:ConnectionId='5' Text="Poll Location"                     />
+                    <MenuFlyoutItem x:ConnectionId='6' Text="Input Location"                           />
+                </MenuFlyoutSubItem>
+            </MenuBarItem>
 
+        </MenuBar>
+        
+        <!--This is to show the location-->
+        <TextBlock x:ConnectionId='2' Padding="0,0,20,0" x:Name="LocationDisplay" Text="Location" HorizontalAlignment="Right" VerticalAlignment="Top"></TextBlock>
+        
+        <!--This is for the input location pop up-->
+        <ContentDialog x:ConnectionId='3' x:Name="LocationDialog"
+               Title="Enter Your Location"
+               PrimaryButtonText="OK"
+               SecondaryButtonText="Cancel">
+            <StackPanel>
+                <AutoSuggestBox x:ConnectionId='4' x:Name="LocationInput"
+                PlaceholderText="Enter location..."
+                                                   
+                                                   />
+            </StackPanel>
+        </ContentDialog>
     </Grid>
 </Window>
 
