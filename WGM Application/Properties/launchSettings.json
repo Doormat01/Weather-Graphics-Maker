@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WGM Application (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WGM Application (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
