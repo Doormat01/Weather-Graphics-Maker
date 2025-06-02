@@ -14,12 +14,13 @@
 > This will remain blank until ready for release
 
 # Main Development Goals:
-- [ ] Create location polling and the ability to change location
+- [ ] Create location polling and the ability to change location **IN PROGRESS**
 - [ ] Create menu UI
 - [ ] Create editor
 - [ ] File handling
 
 ## Local Development Goals (Within top most unchecked goal):
-- [ ] Add a box for the user to input the requested location
-- [ ] Send an api request to fetch the needed data
-- [ ] Display the data in the program until editor is created
+- [x] Add a box for the user to input the requested location
+- [x] Send an api request to fetch the needed data
+- [x] Display the data in the program
+- [ ] Implement Location Search
