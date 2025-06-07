@@ -24,4 +24,5 @@
 - [x] Add a box for the user to input the requested location
 - [x] Send an api request to fetch the needed data
 - [x] Display the data in the program
-- [ ] Implement Location Search
+- [x] Implement Location Search
+- [ ] Implement Saving and Loading Location from search
