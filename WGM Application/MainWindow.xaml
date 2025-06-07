@@ -41,10 +41,14 @@
                SecondaryButtonText="Cancel">
             <StackPanel>
                 <AutoSuggestBox x:Name="LocationInput"
-                PlaceholderText="Enter location..."
-                TextChanged="OnLocationTextChanged"
-                SuggestionChosen="OnLocationChosen"/>
+                        PlaceholderText="Enter location..."
+                        TextChanged="OnLocationTextChanged"
+                        SuggestionChosen="OnLocationChosen"/>
+                <ToggleSwitch x:Name="UseCurrentLocationToggle"
+                      Header="Remember Location?"
+                      Toggled="OnUseCurrentLocationToggled" Margin="0,20,0,0"/>
             </StackPanel>
         </ContentDialog>
+
     </Grid>
 </Window>

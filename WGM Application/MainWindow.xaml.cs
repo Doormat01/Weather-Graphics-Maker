@@ -33,6 +33,7 @@ namespace WGM_Application
         public MainWindow()
         {
             InitializeComponent();
+            LoadToggleState();
         }
         public void openActions(object sender, RoutedEventArgs e)
         {
@@ -49,18 +50,20 @@ namespace WGM_Application
     "New York", "Los Angeles", "Chicago", "Houston", "Miami"
 };
 
-        private void OnLocationTextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        private async void OnLocationTextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
             if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
             {
-                var filteredLocations = locations.Where(l => l.StartsWith(sender.Text, StringComparison.OrdinalIgnoreCase)).ToList();
-                sender.ItemsSource = filteredLocations;
+                string[] suggestions = await locationBasedWeatherAPI.GetCitySuggestions(sender.Text);
+                sender.ItemsSource = suggestions;
             }
         }
 
+
         private void OnLocationChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
         {
-            sender.Text = args.SelectedItem.ToString();
+            location = LocationInput.Text;
+            LocationDisplay.Text = "Location: " + location;
         }
 
         private string location = "";
@@ -97,6 +100,28 @@ namespace WGM_Application
                 LocationDisplay.Text = "Location: " + location;
             }
 
+        }
+
+        private void OnUseCurrentLocationToggled(object sender, RoutedEventArgs e)
+        {
+            var toggle = sender as ToggleSwitch;
+            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+
+            localSettings.Values["UseCurrentLocation"] = toggle.IsOn; // Save toggle state
+            localSettings.Values["SavedLocation"] = LocationInput.Text;
+        }
+
+        // Fix this not doing crap
+        private void LoadToggleState()
+        {
+            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+
+            if (localSettings.Values.ContainsKey("UseCurrentLocation"))
+            {
+                UseCurrentLocationToggle.IsOn = (bool)localSettings.Values["UseCurrentLocation"];
+                LocationDisplay.Text = localSettings.Values.ContainsKey("SavedLocation") ? localSettings.Values["SavedLocation"].ToString() : "No location saved.";
+                System.Diagnostics.Trace.WriteLine(localSettings.Values.ContainsKey("SavedLocation") ? localSettings.Values["SavedLocation"].ToString() : "No location saved.");
+            }
         }
 
     }
