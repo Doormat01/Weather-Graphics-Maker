@@ -15,6 +15,7 @@
 
 # Main Development Goals:
 - [ ] Create location polling and the ability to change location **IN PROGRESS**
+- [ ] Create a settings UI with simple app settings **PLANNED NEXT**
 - [ ] Create menu UI
 - [ ] Create editor
 - [ ] File handling
