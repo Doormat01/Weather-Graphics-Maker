@@ -19,6 +19,7 @@ using Windows.Foundation.Collections;
 using Windows.UI.Popups;
 using Newtonsoft.Json.Linq;
 using WGM_Application.API_Handling;
+using WGM_Application.C_;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -59,12 +60,16 @@ namespace WGM_Application
             }
         }
 
-
         private void OnLocationChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
         {
-            location = LocationInput.Text;
+            location = args.SelectedItem.ToString(); // Use chosen suggestion
             LocationDisplay.Text = "Location: " + location;
+
+            System.Diagnostics.Trace.WriteLine($"Selected Location: {location}");
+
+            utils.SetSavedLocation(location); // Save chosen location
         }
+
 
         private string location = "";
         // Poll user location
@@ -82,9 +87,6 @@ namespace WGM_Application
         System.Diagnostics.Trace.WriteLine(location);
         LocationDisplay.Text = "Location: " + location;
     }
-
-
-
     
         private async void OpenLocationDialog(object sender, RoutedEventArgs e)
         {
@@ -108,7 +110,6 @@ namespace WGM_Application
             var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
 
             localSettings.Values["UseCurrentLocation"] = toggle.IsOn; // Save toggle state
-            localSettings.Values["SavedLocation"] = LocationInput.Text;
         }
 
         // Fix this not doing crap
@@ -119,10 +120,9 @@ namespace WGM_Application
             if (localSettings.Values.ContainsKey("UseCurrentLocation"))
             {
                 UseCurrentLocationToggle.IsOn = (bool)localSettings.Values["UseCurrentLocation"];
-                LocationDisplay.Text = localSettings.Values.ContainsKey("SavedLocation") ? localSettings.Values["SavedLocation"].ToString() : "No location saved.";
+                LocationDisplay.Text = "Location: " + (localSettings.Values.ContainsKey("SavedLocation") ? localSettings.Values["SavedLocation"].ToString() : "No location saved.");
                 System.Diagnostics.Trace.WriteLine(localSettings.Values.ContainsKey("SavedLocation") ? localSettings.Values["SavedLocation"].ToString() : "No location saved.");
             }
         }
-
     }
 }
