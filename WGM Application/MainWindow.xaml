@@ -24,11 +24,11 @@
             </MenuBarItem>
             <MenuBarItem Title="Edit">
                 <MenuFlyoutSubItem Text="Location">
-                    <MenuFlyoutItem Text="Poll Location" Click="pollLocation"/>
+                    <MenuFlyoutItem Text="Poll Location" Click="PollLocationEnabled" ToolTipService.ToolTip="Once started polling will be set on by default. To disable go into settings."/>
                     <MenuFlyoutItem Text="Input Location" Click="OpenLocationDialog"/>
                 </MenuFlyoutSubItem>
+                <MenuFlyoutItem Text="Settings" Click="openActions"></MenuFlyoutItem>
             </MenuBarItem>
-
         </MenuBar>
         
         <!--This is to show the location-->

@@ -65,29 +65,31 @@ namespace WGM_Application
             location = args.SelectedItem.ToString(); // Use chosen suggestion
             LocationDisplay.Text = "Location: " + location;
 
-            System.Diagnostics.Trace.WriteLine($"Selected Location: {location}");
-
             utils.SetSavedLocation(location); // Save chosen location
         }
 
 
         private string location = "";
         // Poll user location
-        private async void pollLocation(object sender, RoutedEventArgs e)
+        private void PollLocationEnabled(object sender, RoutedEventArgs e)
     {
-        var geolocator = new Geolocator();
-        Geoposition position = await geolocator.GetGeopositionAsync();
+            PollLocation();
+            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            localSettings.Values["PollingEnabled"] = true;
+        }
 
-        double latitude = position.Coordinate.Point.Position.Latitude;
-        double longitude = position.Coordinate.Point.Position.Longitude;
+        private async void PollLocation()
+        {
+            var geolocator = new Geolocator();
+            Geoposition position = await geolocator.GetGeopositionAsync();
 
-        System.Diagnostics.Trace.WriteLine($"User Location: {latitude}, {longitude}");
+            double latitude = position.Coordinate.Point.Position.Latitude;
+            double longitude = position.Coordinate.Point.Position.Longitude;
 
-        location = await locationBasedWeatherAPI.GetTownFromLatLong( latitude, longitude );
-        System.Diagnostics.Trace.WriteLine(location);
-        LocationDisplay.Text = "Location: " + location;
-    }
-    
+            location = await locationBasedWeatherAPI.GetTownFromLatLong(latitude, longitude);
+            LocationDisplay.Text = "Location: " + location;
+        }
+
         private async void OpenLocationDialog(object sender, RoutedEventArgs e)
         {
             ContentDialogResult result = await LocationDialog.ShowAsync();
@@ -121,7 +123,11 @@ namespace WGM_Application
             {
                 UseCurrentLocationToggle.IsOn = (bool)localSettings.Values["UseCurrentLocation"];
                 LocationDisplay.Text = "Location: " + (localSettings.Values.ContainsKey("SavedLocation") ? localSettings.Values["SavedLocation"].ToString() : "No location saved.");
-                System.Diagnostics.Trace.WriteLine(localSettings.Values.ContainsKey("SavedLocation") ? localSettings.Values["SavedLocation"].ToString() : "No location saved.");
+            }
+
+            if(localSettings.Values.ContainsKey("PollingEnabled") == true)
+            {
+                PollLocation();
             }
         }
     }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WGM Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0842db0a89d835840f3de581e80566abe0d08615")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56e1c32991b9b5731d47d6d73c65be4ca4ffdff2")]
 [assembly: System.Reflection.AssemblyProductAttribute("WGM Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WGM Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
