@@ -20,15 +20,11 @@ using Windows.UI.Popups;
 using Newtonsoft.Json.Linq;
 using WGM_Application.API_Handling;
 using WGM_Application.C_;
-
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
+using WGM_Application.AppWindows;
+using Microsoft.UI.Xaml.Media.Animation;
 
 namespace WGM_Application
 {
-    /// <summary>
-    /// An empty window that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainWindow : Window
     {
         public MainWindow()
@@ -44,12 +40,6 @@ namespace WGM_Application
         {
             System.Diagnostics.Trace.WriteLine("Opening Template!");
         }
-
-        // This is for the user based location data and everything directly under will be removed
-        private readonly List<string> locations = new List<string>
-{
-    "New York", "Los Angeles", "Chicago", "Houston", "Miami"
-};
 
         private async void OnLocationTextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
@@ -72,13 +62,14 @@ namespace WGM_Application
         private string location = "";
         // Poll user location
         private void PollLocationEnabled(object sender, RoutedEventArgs e)
-    {
+        {
             PollLocation();
             var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
             localSettings.Values["PollingEnabled"] = true;
         }
 
-        private async void PollLocation()
+        // Eventually move this to be in the api handling
+        public async void PollLocation()
         {
             var geolocator = new Geolocator();
             Geoposition position = await geolocator.GetGeopositionAsync();
@@ -114,20 +105,43 @@ namespace WGM_Application
             localSettings.Values["UseCurrentLocation"] = toggle.IsOn; // Save toggle state
         }
 
-        // Fix this not doing crap
+        private void OpenSettings(object sender, RoutedEventArgs e)
+        {
+            AppWindows.SettingsWindow settingsWindow = new AppWindows.SettingsWindow();
+            settingsWindow.Activate();
+        }
+
         private void LoadToggleState()
         {
             var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
 
-            if (localSettings.Values.ContainsKey("UseCurrentLocation"))
+            // Check if Polling is enabled and call PollLocation() if true
+            if (localSettings.Values.ContainsKey("PollingEnabled") &&
+                localSettings.Values["PollingEnabled"] is bool pollingEnabled && pollingEnabled)
             {
-                UseCurrentLocationToggle.IsOn = (bool)localSettings.Values["UseCurrentLocation"];
-                LocationDisplay.Text = "Location: " + (localSettings.Values.ContainsKey("SavedLocation") ? localSettings.Values["SavedLocation"].ToString() : "No location saved.");
-            }
-
-            if(localSettings.Values.ContainsKey("PollingEnabled") == true)
-            {
+                System.Diagnostics.Trace.WriteLine("Polling Enabled, calling PollLocation()");
                 PollLocation();
+            }
+            else if (localSettings.Values.ContainsKey("UseCurrentLocation") &&
+                     localSettings.Values["UseCurrentLocation"] is bool useLocation && useLocation)
+            {
+                // Use Saved Location when UseCurrentLocation is enabled
+                System.Diagnostics.Trace.WriteLine("Using current location");
+                UseCurrentLocationToggle.IsOn = true;
+
+                LocationDisplay.Text = "Location: " +
+                    (localSettings.Values.ContainsKey("SavedLocation")
+                        ? localSettings.Values["SavedLocation"].ToString()
+                        : "No location saved.");
+            }
+            else
+            {
+                // If neither Polling nor UseCurrentLocation are enabled, remove saved location
+                System.Diagnostics.Trace.WriteLine("No polling or current location set, removing SavedLocation.");
+                localSettings.Values.Remove("SavedLocation");
+
+                // Set LocationDisplay to default prompt
+                LocationDisplay.Text = "Input Location or Enable Polling";
             }
         }
     }

@@ -34,6 +34,9 @@
     <AppxPackagedFile Include="C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\WGM Application.dll">
       <PackagePath>WGM Application.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\WGM Application.dll.config">
+      <PackagePath>WGM Application.dll.config</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>WGM Application.exe</PackagePath>
     </AppxPackagedFile>
@@ -684,6 +687,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\WGM Application.deps.json">
       <PackagePath>WGM Application.deps.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\Assets\appIcon.png.targetsize-256.png">
+      <PackagePath>Assets\appIcon.png.targetsize-256.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>

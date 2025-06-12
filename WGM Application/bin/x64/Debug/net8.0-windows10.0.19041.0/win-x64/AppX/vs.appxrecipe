@@ -18,7 +18,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>AD2F91BB7495A2A349A52E83856EBE11DF1119FB57343F4FD58BD1AF02708BB3</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>7DDAC8CF66A38DBE0FAA488E1FAB98BA845F2B5724399D6337074424F05B9D88</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>0791e379-587b-4acc-ad0f-f5e2c5c7c1d6_1.0.0.0_x64__67knwk0af3cde</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>0791e379-587b-4acc-ad0f-f5e2c5c7c1d6_67knwk0af3cde!App</RegisteredUserModeAppID>
     <RegisteredPackageID>0791e379-587b-4acc-ad0f-f5e2c5c7c1d6</RegisteredPackageID>
@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-06-10T17:49:06.928</Modified>
+      <Modified>2025-06-12T22:58:22.891</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-06-10T17:49:06.639</Modified>
+      <Modified>2025-06-12T22:47:23.202</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\WGM Application.runtimeconfig.json">
       <PackagePath>WGM Application.runtimeconfig.json</PackagePath>
@@ -43,11 +43,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\WGM Application.dll">
       <PackagePath>WGM Application.dll</PackagePath>
-      <Modified>2025-06-10T17:49:06.302</Modified>
+      <Modified>2025-06-12T22:58:22.599</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\WGM Application.dll.config">
+      <PackagePath>WGM Application.dll.config</PackagePath>
+      <Modified>2025-06-12T20:05:12.944</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>WGM Application.exe</PackagePath>
-      <Modified>2025-06-10T17:49:06.347</Modified>
+      <Modified>2025-06-12T22:58:22.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.16\runtimes\win-x64\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -911,7 +915,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\WGM Application.deps.json">
       <PackagePath>WGM Application.deps.json</PackagePath>
-      <Modified>2025-06-07T23:19:45.403</Modified>
+      <Modified>2025-06-12T20:08:53.195</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\Assets\appIcon.png.targetsize-256.png">
+      <PackagePath>Assets\appIcon.png.targetsize-256.png</PackagePath>
+      <Modified>2025-06-10T18:04:59.119</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\Downloads\organized\coding\WIP\weatherGraphicsMaker\WGM Application\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>

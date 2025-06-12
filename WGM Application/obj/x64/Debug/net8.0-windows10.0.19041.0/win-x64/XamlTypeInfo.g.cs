@@ -226,7 +226,7 @@ namespace WGM_Application.WGM_Application_XamlTypeInfo
         
         private void InitTypeTables()
         {
-            _typeNameTable = new string[22];
+            _typeNameTable = new string[23];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -236,21 +236,22 @@ namespace WGM_Application.WGM_Application_XamlTypeInfo
             _typeNameTable[6] = "Microsoft.UI.Composition.SystemBackdrops.MicaKind";
             _typeNameTable[7] = "System.Enum";
             _typeNameTable[8] = "System.ValueType";
-            _typeNameTable[9] = "Microsoft.UI.Xaml.Controls.MenuBar";
-            _typeNameTable[10] = "Microsoft.UI.Xaml.Controls.Control";
-            _typeNameTable[11] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuBarItem>";
-            _typeNameTable[12] = "Microsoft.UI.Xaml.Controls.MenuBarItem";
-            _typeNameTable[13] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>";
-            _typeNameTable[14] = "Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase";
-            _typeNameTable[15] = "String";
-            _typeNameTable[16] = "WGM_Application.MainWindow";
-            _typeNameTable[17] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[18] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[19] = "Microsoft.UI.Xaml.DependencyObject";
-            _typeNameTable[20] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[21] = "Int32";
+            _typeNameTable[9] = "WGM_Application.AppWindows.SettingsWindow";
+            _typeNameTable[10] = "Microsoft.UI.Xaml.Window";
+            _typeNameTable[11] = "Microsoft.UI.Xaml.Controls.MenuBar";
+            _typeNameTable[12] = "Microsoft.UI.Xaml.Controls.Control";
+            _typeNameTable[13] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuBarItem>";
+            _typeNameTable[14] = "Microsoft.UI.Xaml.Controls.MenuBarItem";
+            _typeNameTable[15] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>";
+            _typeNameTable[16] = "Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase";
+            _typeNameTable[17] = "String";
+            _typeNameTable[18] = "WGM_Application.MainWindow";
+            _typeNameTable[19] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[20] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[21] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[22] = "Int32";
 
-            _typeTable = new global::System.Type[22];
+            _typeTable = new global::System.Type[23];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -260,19 +261,20 @@ namespace WGM_Application.WGM_Application_XamlTypeInfo
             _typeTable[6] = typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind);
             _typeTable[7] = typeof(global::System.Enum);
             _typeTable[8] = typeof(global::System.ValueType);
-            _typeTable[9] = typeof(global::Microsoft.UI.Xaml.Controls.MenuBar);
-            _typeTable[10] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
-            _typeTable[11] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.MenuBarItem>);
-            _typeTable[12] = typeof(global::Microsoft.UI.Xaml.Controls.MenuBarItem);
-            _typeTable[13] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>);
-            _typeTable[14] = typeof(global::Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase);
-            _typeTable[15] = typeof(global::System.String);
-            _typeTable[16] = typeof(global::WGM_Application.MainWindow);
-            _typeTable[17] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[18] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[19] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
-            _typeTable[20] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[21] = typeof(global::System.Int32);
+            _typeTable[9] = typeof(global::WGM_Application.AppWindows.SettingsWindow);
+            _typeTable[10] = typeof(global::Microsoft.UI.Xaml.Window);
+            _typeTable[11] = typeof(global::Microsoft.UI.Xaml.Controls.MenuBar);
+            _typeTable[12] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
+            _typeTable[13] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.MenuBarItem>);
+            _typeTable[14] = typeof(global::Microsoft.UI.Xaml.Controls.MenuBarItem);
+            _typeTable[15] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>);
+            _typeTable[16] = typeof(global::Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase);
+            _typeTable[17] = typeof(global::System.String);
+            _typeTable[18] = typeof(global::WGM_Application.MainWindow);
+            _typeTable[19] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[20] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[21] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[22] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -309,22 +311,24 @@ namespace WGM_Application.WGM_Application_XamlTypeInfo
 
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
         private object Activate_4_MicaBackdrop() { return new global::Microsoft.UI.Xaml.Media.MicaBackdrop(); }
-        private object Activate_9_MenuBar() { return new global::Microsoft.UI.Xaml.Controls.MenuBar(); }
-        private object Activate_12_MenuBarItem() { return new global::Microsoft.UI.Xaml.Controls.MenuBarItem(); }
-        private object Activate_16_MainWindow() { return new global::WGM_Application.MainWindow(); }
-        private object Activate_18_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_9_SettingsWindow() { return new global::WGM_Application.AppWindows.SettingsWindow(); }
+        private object Activate_11_MenuBar() { return new global::Microsoft.UI.Xaml.Controls.MenuBar(); }
+        private object Activate_14_MenuBarItem() { return new global::Microsoft.UI.Xaml.Controls.MenuBarItem(); }
+        private object Activate_18_MainWindow() { return new global::WGM_Application.MainWindow(); }
+        private object Activate_19_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void StaticInitializer_0_XamlControlsResources() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources).TypeHandle);
         private void StaticInitializer_4_MicaBackdrop() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop).TypeHandle);
         private void StaticInitializer_6_MicaKind() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind).TypeHandle);
         private void StaticInitializer_7_Enum() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Enum).TypeHandle);
         private void StaticInitializer_8_ValueType() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.ValueType).TypeHandle);
-        private void StaticInitializer_9_MenuBar() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.MenuBar).TypeHandle);
-        private void StaticInitializer_11_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.MenuBarItem>).TypeHandle);
-        private void StaticInitializer_12_MenuBarItem() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.MenuBarItem).TypeHandle);
-        private void StaticInitializer_13_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>).TypeHandle);
-        private void StaticInitializer_16_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::WGM_Application.MainWindow).TypeHandle);
-        private void StaticInitializer_18_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
-        private void StaticInitializer_20_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
+        private void StaticInitializer_9_SettingsWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::WGM_Application.AppWindows.SettingsWindow).TypeHandle);
+        private void StaticInitializer_11_MenuBar() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.MenuBar).TypeHandle);
+        private void StaticInitializer_13_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.MenuBarItem>).TypeHandle);
+        private void StaticInitializer_14_MenuBarItem() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.MenuBarItem).TypeHandle);
+        private void StaticInitializer_15_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>).TypeHandle);
+        private void StaticInitializer_18_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::WGM_Application.MainWindow).TypeHandle);
+        private void StaticInitializer_19_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
+        private void StaticInitializer_21_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -332,19 +336,19 @@ namespace WGM_Application.WGM_Application_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_11_IList(object instance, object item)
+        private void VectorAdd_13_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.MenuBarItem>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.MenuBarItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_13_IList(object instance, object item)
+        private void VectorAdd_15_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_20_IList(object instance, object item)
+        private void VectorAdd_21_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -414,38 +418,32 @@ namespace WGM_Application.WGM_Application_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 9:   //  Microsoft.UI.Xaml.Controls.MenuBar
+            case 9:   //  WGM_Application.AppWindows.SettingsWindow
+                userType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
+                userType.Activator = Activate_9_SettingsWindow;
+                userType.StaticInitializer = StaticInitializer_9_SettingsWindow;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  Microsoft.UI.Xaml.Window
+                xamlType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 11:   //  Microsoft.UI.Xaml.Controls.MenuBar
                 userType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_9_MenuBar;
-                userType.StaticInitializer = StaticInitializer_9_MenuBar;
+                userType.Activator = Activate_11_MenuBar;
+                userType.StaticInitializer = StaticInitializer_11_MenuBar;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.MenuBar.Items");
                 userType.AddMemberName("Items");
                 xamlType = userType;
                 break;
 
-            case 10:   //  Microsoft.UI.Xaml.Controls.Control
+            case 12:   //  Microsoft.UI.Xaml.Controls.Control
                 xamlType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuBarItem>
-                userType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_11_IList;
-                userType.CollectionAdd = VectorAdd_11_IList;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 12:   //  Microsoft.UI.Xaml.Controls.MenuBarItem
-                userType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_12_MenuBarItem;
-                userType.StaticInitializer = StaticInitializer_12_MenuBarItem;
-                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.MenuBarItem.Items");
-                userType.AddMemberName("Items");
-                userType.AddMemberName("Title");
-                xamlType = userType;
-                break;
-
-            case 13:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>
+            case 13:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuBarItem>
                 userType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.StaticInitializer = StaticInitializer_13_IList;
                 userType.CollectionAdd = VectorAdd_13_IList;
@@ -453,30 +451,44 @@ namespace WGM_Application.WGM_Application_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 14:   //  Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase
+            case 14:   //  Microsoft.UI.Xaml.Controls.MenuBarItem
+                userType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
+                userType.Activator = Activate_14_MenuBarItem;
+                userType.StaticInitializer = StaticInitializer_14_MenuBarItem;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.MenuBarItem.Items");
+                userType.AddMemberName("Items");
+                userType.AddMemberName("Title");
+                xamlType = userType;
+                break;
+
+            case 15:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>
+                userType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.StaticInitializer = StaticInitializer_15_IList;
+                userType.CollectionAdd = VectorAdd_15_IList;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 16:   //  Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase
                 xamlType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 15:   //  String
+            case 17:   //  String
                 xamlType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 16:   //  WGM_Application.MainWindow
+            case 18:   //  WGM_Application.MainWindow
                 userType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_16_MainWindow;
-                userType.StaticInitializer = StaticInitializer_16_MainWindow;
+                userType.Activator = Activate_18_MainWindow;
+                userType.StaticInitializer = StaticInitializer_18_MainWindow;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 17:   //  Microsoft.UI.Xaml.Window
-                xamlType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 18:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 19:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_18_TreeViewNode;
-                userType.StaticInitializer = StaticInitializer_18_TreeViewNode;
+                userType.Activator = Activate_19_TreeViewNode;
+                userType.StaticInitializer = StaticInitializer_19_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -488,19 +500,19 @@ namespace WGM_Application.WGM_Application_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 19:   //  Microsoft.UI.Xaml.DependencyObject
+            case 20:   //  Microsoft.UI.Xaml.DependencyObject
                 xamlType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 20:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 21:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_20_IList;
-                userType.CollectionAdd = VectorAdd_20_IList;
+                userType.StaticInitializer = StaticInitializer_21_IList;
+                userType.CollectionAdd = VectorAdd_21_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 21:   //  Int32
+            case 22:   //  Int32
                 xamlType = new global::WGM_Application.WGM_Application_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }

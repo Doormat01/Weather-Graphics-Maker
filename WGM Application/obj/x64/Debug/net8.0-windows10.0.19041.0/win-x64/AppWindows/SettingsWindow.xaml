@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="WGM_Application.AppWindows.SettingsWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WGM_Application.AppWindows"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Settings">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop Kind="BaseAlt"></MicaBackdrop>
+    </Window.SystemBackdrop>
+
+    <Grid Background="#FF001C3D">
+        <CheckBox x:ConnectionId='2' Content="Location Polling"
+                                   
+                                        ToolTipService.ToolTip="Enables/Disables automatic location grabbing" x:Name="PollingCheckbox"/>
+    </Grid>
+</Window>
+
