@@ -17,12 +17,15 @@
 - [x] Create location polling and the ability to change location **COMPLETED**
 - [ ] Create a settings UI with simple app settings **IN PROGRESS**
 - [ ] Create menu UI **PLANNED NEXT**
+- [ ] Weather data polling based off of selected menu option
 - [ ] Create editor
 - [ ] File handling
 
 ## Local Development Goals (Within top most unchecked goal):
 - [ ] Create settings UI
-  - [ ]  Create tabs
-  - [ ]  Add buttons
-- [ ] Create setting functions
+  - [x] Create overall window
+  - [x] Add a setting for disabling polling
+  - [ ] Create tabs
+  - [x] Add buttons
+- [x] Create setting functions
 
